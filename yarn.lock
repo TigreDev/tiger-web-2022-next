@@ -750,6 +750,16 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fontsource/encode-sans-semi-condensed@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/encode-sans-semi-condensed/-/encode-sans-semi-condensed-4.5.9.tgz#96cee9f69fbf8e558381f6d8ebb19c124811611c"
+  integrity sha512-5NpwGFV/GcXAORC1vV2NqijQntpxlqXB5mU7s+o3TuqPNhBk6cN1GQQz5lab7Rh2dy/toz3ZrhHjQmRY7/VYag==
+
+"@fontsource/galada@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/galada/-/galada-4.5.9.tgz#a7384bb7249f98eb88b4a911026cb520d718bfb0"
+  integrity sha512-ib1YvJR0zXZmq4Ak7JAE7aqegMdXeA3FG8YqICViu/DIjWBBiaZhphqe71pjEgAZuhfos2ytA8z604osbnAcdw==
+
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.9.5.tgz#2cbaf9a89460da24b5ca6531b8bbfc23e1df50c7"
