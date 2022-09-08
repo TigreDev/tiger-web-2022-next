@@ -26,7 +26,7 @@ const MainContainer = ({
     },
     innerSX: {
       w: "full",
-      minH: { md: "100vh" },
+      minH: "100vh",
       maxW: "1140px",
       flexDir: "column",
       align: "center",

@@ -34,7 +34,6 @@ const Landing = () => {
         bgRepeat: "no-repeat",
         bgSize: "cover",
         bgPosition: { base: "initial", md: "right top" },
-        bgAttachment: "fixed",
       }}
       innerSX={{}}
     >
