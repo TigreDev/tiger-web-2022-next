@@ -1,10 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
-import LayoutStyles from "./components/Organism/LayoutStyle";
 
 const theme = extendTheme({
-  components: {
-    Layout: LayoutStyles,
-  },
+  components: {},
   sizes: {
     content: "1260px",
   },
