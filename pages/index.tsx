@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import CustomToast from "../atoms/CustomToast/CustomToast";
 import MainContainer from "../atoms/MainContainer";
 import Name from "../molecules/Name/Name";
+import largerTiger from "/public/largerTiger.png";
 
 const Landing = () => {
   const toast = useToast();
@@ -12,7 +13,7 @@ const Landing = () => {
   }) as ToastPosition;
 
   useEffect(() => {
-    setTimeout(() => {
+    const toastTimer = setTimeout(() => {
       toast({
         position,
         render: () => (
@@ -23,19 +24,23 @@ const Landing = () => {
         ),
       });
     }, 2000);
+    return () => {
+      clearTimeout(toastTimer);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <MainContainer
+      bgImage={largerTiger}
+      bgImageProps={{
+        layout: "fill",
+        objectPosition: "left",
+        objectFit: "cover",
+      }}
       mainSX={{
         bgColor: "purple.400",
-        bg: "url('largerTiger.png')",
-        bgRepeat: "no-repeat",
-        bgSize: "cover",
-        bgPosition: { base: "initial", md: "right top" },
       }}
-      innerSX={{}}
     >
       <Name />
     </MainContainer>

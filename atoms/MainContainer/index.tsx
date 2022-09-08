@@ -1,21 +1,32 @@
-import { Flex, FlexProps, mergeThemeOverride } from "@chakra-ui/react";
+import {
+  Flex,
+  FlexProps,
+  mergeThemeOverride,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import Image, { ImageProps } from "next/image";
 import React from "react";
 
 interface MainContainerProps {
   children: React.ReactNode;
   mainSX?: FlexProps;
   innerSX?: FlexProps;
+  bgImage?: ImageProps["src"];
+  bgImageProps?: Omit<Omit<ImageProps, "src">, "alt">;
 }
 
 interface MainContainerStyles {
   mainSX?: FlexProps;
   innerSX?: FlexProps;
+  bgImageSX?: ImageProps;
 }
 
 const MainContainer = ({
   children,
   mainSX = {},
   innerSX = {},
+  bgImageProps = {},
+  bgImage,
 }: MainContainerProps) => {
   const defaultTheme: MainContainerStyles = {
     mainSX: {
@@ -41,7 +52,12 @@ const MainContainer = ({
 
   return (
     <Flex {...themeStyles.mainSX} data-testid="mainContainer-outter">
-      <Flex {...themeStyles.innerSX} data-testid="mainContainer-inner">
+      {bgImage && <Image src={bgImage} alt="bgImage" {...bgImageProps} />}
+      <Flex
+        {...themeStyles.innerSX}
+        data-testid="mainContainer-inner"
+        zIndex="10"
+      >
         {children}
       </Flex>
     </Flex>
