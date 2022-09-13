@@ -1,13 +1,10 @@
 import { Stack, Box, Heading, Text, Link } from "@chakra-ui/react";
-import Head from "next/head";
+import Image from "next/image";
+import NameTitle from "/public/NameTitle.png";
 
 const Name = () => {
   return (
     <>
-      <Head>
-        <title>Ruben Tigre | Frontend developer</title>
-      </Head>
-
       <Stack
         justify={{ md: "center" }}
         mt={{ base: 20, md: 0 }}
@@ -15,24 +12,21 @@ const Name = () => {
         alignSelf={{ base: "start", md: "initial" }}
       >
         <Box color="white">
-          <Heading
-            fontSize={{ base: "3rem", md: "6rem", lg: "10rem" }}
-            textShadow={{ base: "4px 4px #1f114d", md: "8px 8px #1f114d" }}
-          >
-            Ruben Tigre
-          </Heading>
+          <Image src={NameTitle} alt="NameTitle" />
           <Heading
             fontSize={{ base: "1rem", md: "xl", lg: "4xl" }}
+            letterSpacing="1em"
             ml={{ base: 0.5, lg: 2 }}
+            textShadow="3px 3px #1f114d"
+            textAlign="center"
           >
-            Frontend developer
+            FRONTEND
           </Heading>
         </Box>
         <Text
           position="absolute"
-          bottom={4}
+          bottom={20}
           right={4}
-          fontFamily="encode"
           letterSpacing="0.03em"
           fontSize="0.750rem"
         >

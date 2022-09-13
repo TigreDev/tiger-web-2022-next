@@ -6,6 +6,8 @@ const theme = extendTheme({
   fonts: {
     encode: `'encode sans semi condensed', sans-serif`,
     galada: `'galada', sans-serif`,
+    atomicMarker: `'Atomic Marker', sans-serif`,
+    atomicMarkerExtra: `'Atomic Marker Extra', sans-serif`,
   },
   components: {
     Heading: {

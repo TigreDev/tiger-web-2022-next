@@ -1,9 +1,17 @@
-import { ToastPosition, useBreakpointValue, useToast } from "@chakra-ui/react";
+import {
+  Box,
+  ToastPosition,
+  useBreakpointValue,
+  useToast,
+} from "@chakra-ui/react";
+import Head from "next/head";
+import Image from "next/image";
 import { useEffect } from "react";
 import CustomToast from "../atoms/CustomToast/CustomToast";
 import MainContainer from "../atoms/MainContainer";
 import Name from "../molecules/Name/Name";
 import largerTiger from "/public/largerTiger.png";
+import NeverGiveUpBanner from "/public/NeverGiveUpBanner.png";
 
 const Landing = () => {
   const toast = useToast();
@@ -31,19 +39,28 @@ const Landing = () => {
   }, []);
 
   return (
-    <MainContainer
-      bgImage={largerTiger}
-      bgImageProps={{
-        layout: "fill",
-        objectPosition: "left",
-        objectFit: "cover",
-      }}
-      mainSX={{
-        bgColor: "purple.400",
-      }}
-    >
-      <Name />
-    </MainContainer>
+    <Box>
+      <Head>
+        <title>Ruben Tigre | Frontend Developer</title>
+      </Head>
+      <MainContainer
+        bgImage={largerTiger}
+        bgImageProps={{
+          layout: "fill",
+          objectPosition: "left",
+          objectFit: "cover",
+        }}
+        mainSX={{
+          bgColor: "purple.400",
+        }}
+      >
+        <Name />
+      </MainContainer>
+      <Box position="relative" top="-78px" mb="calc(200px * -1)">
+        <Image src={NeverGiveUpBanner} alt="neverg" style={{ width: "100%" }} />
+      </Box>
+      <Box h="500px"></Box>
+    </Box>
   );
 };
 
