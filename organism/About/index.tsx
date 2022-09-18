@@ -1,6 +1,6 @@
 import { Flex, Stack, Text } from "@chakra-ui/react";
 import React from "react";
-import MainContainer from "../../atoms/MainContainer";
+import MainContainer from "atoms/MainContainer";
 
 const About = () => {
   return (
@@ -9,6 +9,10 @@ const About = () => {
         bgColor: "brand.secondary",
         pt: { base: 20, md: 26 },
         minH: "100vh",
+      }}
+      innerSX={{
+        align: "center",
+        justify: "center",
       }}
     >
       <Flex flexDir="row" w="full" align="center" justify="end">

@@ -5,12 +5,11 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import Head from "next/head";
-import Image from "next/image";
 import { useEffect } from "react";
-import CustomToast from "../atoms/CustomToast/CustomToast";
-import About from "../organism/About";
-import Hero from "../organism/Hero";
-import NeverGiveUpBanner from "/public/NeverGiveUpBanner.png";
+import CustomToast from "atoms/CustomToast";
+import About from "organism/About";
+import Hero from "organism/Hero";
+import NeverGiveUp from "atoms/NeverGiveUp";
 
 const Landing = () => {
   const toast = useToast();
@@ -43,9 +42,7 @@ const Landing = () => {
         <title>Ruben Tigre | Frontend Developer</title>
       </Head>
       <Hero />
-      <Box position="relative" top="-78px" mb="calc(200px * -1)" zIndex="10">
-        <Image src={NeverGiveUpBanner} alt="neverg" style={{ width: "100%" }} />
-      </Box>
+      <NeverGiveUp />
       <About />
     </Box>
   );

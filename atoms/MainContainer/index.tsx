@@ -1,9 +1,4 @@
-import {
-  Flex,
-  FlexProps,
-  mergeThemeOverride,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Flex, FlexProps, mergeThemeOverride } from "@chakra-ui/react";
 import Image, { ImageProps } from "next/image";
 import React from "react";
 

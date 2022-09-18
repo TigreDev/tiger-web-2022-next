@@ -23,7 +23,7 @@ const Name = () => {
             FRONTEND
           </Heading>
         </Box>
-        <Text
+        {/* <Text
           position="absolute"
           bottom={20}
           right={4}
@@ -34,7 +34,7 @@ const Name = () => {
           <Link href="https://www.instagram.com/lais.draws/" target="_blank">
             @lais.draws
           </Link>
-        </Text>
+        </Text> */}
       </Stack>
     </>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import MainContainer from "../../atoms/MainContainer";
-import Name from "../../molecules/Name/Name";
+import Name from "../../molecules/Name";
 import largerTiger from "/public/img/largerTiger.png";
 
 const Hero = () => {
