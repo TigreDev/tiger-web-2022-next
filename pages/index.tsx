@@ -8,9 +8,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
 import CustomToast from "../atoms/CustomToast/CustomToast";
-import MainContainer from "../atoms/MainContainer";
-import Name from "../molecules/Name/Name";
-import largerTiger from "/public/largerTiger.png";
+import About from "../organism/About";
+import Hero from "../organism/Hero";
 import NeverGiveUpBanner from "/public/NeverGiveUpBanner.png";
 
 const Landing = () => {
@@ -43,23 +42,11 @@ const Landing = () => {
       <Head>
         <title>Ruben Tigre | Frontend Developer</title>
       </Head>
-      <MainContainer
-        bgImage={largerTiger}
-        bgImageProps={{
-          layout: "fill",
-          objectPosition: "left",
-          objectFit: "cover",
-        }}
-        mainSX={{
-          bgColor: "purple.400",
-        }}
-      >
-        <Name />
-      </MainContainer>
-      <Box position="relative" top="-78px" mb="calc(200px * -1)">
+      <Hero />
+      <Box position="relative" top="-78px" mb="calc(200px * -1)" zIndex="10">
         <Image src={NeverGiveUpBanner} alt="neverg" style={{ width: "100%" }} />
       </Box>
-      <Box h="500px"></Box>
+      <About />
     </Box>
   );
 };

@@ -34,6 +34,7 @@ const MainContainer = ({
       direction: "column",
       align: "center",
       color: "white",
+      position: "relative",
     },
     innerSX: {
       w: "full",
