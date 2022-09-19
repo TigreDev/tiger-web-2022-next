@@ -48,9 +48,7 @@ const MainContainer = ({
 
   return (
     <Flex {...themeStyles.mainSX} data-testid="mainContainer-outter">
-      {bgImage && (
-        <Image src={bgImage} alt="bgImage" {...bgImageProps} priority />
-      )}
+      {bgImage && <Image src={bgImage} alt="bgImage" {...bgImageProps} />}
       <Flex
         {...themeStyles.innerSX}
         data-testid="mainContainer-inner"
