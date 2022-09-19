@@ -54,7 +54,10 @@ const About = () => {
           </Text>
         </Stack>
       </Flex>
-      <Flex
+
+      {/*
+      //TODO: solve the font issue
+       <Flex
         position="absolute"
         p={{ base: "0", md: "12" }}
         zIndex="0"
@@ -73,7 +76,7 @@ const About = () => {
           <PaintedText text="W" from="leftBottom" />
           <PaintedText text="C" from="rightBottom" />
         </Flex>
-      </Flex>
+      </Flex> */}
     </MainContainer>
   );
 };
