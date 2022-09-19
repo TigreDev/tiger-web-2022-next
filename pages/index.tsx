@@ -9,7 +9,8 @@ import { useEffect } from "react";
 import CustomToast from "atoms/CustomToast";
 import About from "organism/About";
 import Hero from "organism/Hero";
-import NeverGiveUp from "atoms/NeverGiveUp";
+import NeverGiveUp from "molecules/NeverGiveUp";
+import TrainSection from "molecules/TrainSection";
 
 const Landing = () => {
   const toast = useToast();
@@ -37,7 +38,7 @@ const Landing = () => {
   }, []);
 
   return (
-    <Box>
+    <Box position="relative">
       <Head>
         <title>Ruben Tigre | Frontend Developer</title>
       </Head>
