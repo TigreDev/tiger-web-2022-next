@@ -7,7 +7,6 @@ const theme = extendTheme({
     encode: `'encode sans semi condensed', sans-serif`,
     galada: `'galada', sans-serif`,
     atomicMarker: `'Atomic Marker', sans-serif`,
-    atomicMarkerExtra: `'Atomic Marker Extra', sans-serif`,
   },
   components: {
     Heading: {
@@ -29,7 +28,7 @@ const theme = extendTheme({
       lineHeight: "110%",
     },
     p: {
-      fontSize: { base: "24px", md: "32px" },
+      fontSize: { base: "20px", md: "24px" },
       fontWeight: "medium",
       lineHeight: "110%",
     },

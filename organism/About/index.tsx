@@ -1,18 +1,20 @@
 import { Flex, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import MainContainer from "atoms/MainContainer";
+import PaintedText from "atoms/PaintedText";
+import JapanText from "molecules/JapanText";
 
 const About = () => {
   return (
     <MainContainer
       mainSX={{
         bgColor: "brand.secondary",
-        pt: { base: 20, md: 26 },
         minH: "100vh",
       }}
       innerSX={{
         align: "center",
         justify: "center",
+        overflow: "hidden",
       }}
     >
       <Flex flexDir="row" w="full" align="center" justify="end">
@@ -23,10 +25,9 @@ const About = () => {
           mr={{ base: 10, md: 0 }}
           align="center"
           justify="center"
+          position="relative"
         >
-          <Text textAlign="center" maxW="min-content">
-            限界を超えろ
-          </Text>
+          <JapanText />
         </Flex>
         <Stack
           maxW="700px"
@@ -52,6 +53,25 @@ const About = () => {
             design, to product, through development and QA.
           </Text>
         </Stack>
+      </Flex>
+      <Flex
+        position="absolute"
+        p="12"
+        w="full"
+        h="full"
+        overflow="hidden"
+        flexDirection="column"
+        justify="space-between"
+        sx={{ color: "white", pointerEvents: "none" }}
+      >
+        <Flex justify="space-between" sx={{ pointerEvents: "all" }}>
+          <PaintedText text="Q" from="leftTop" />
+          <PaintedText text="C" from="rightTop" />
+        </Flex>
+        <Flex justify="space-between" sx={{ pointerEvents: "all" }}>
+          <PaintedText text="W" from="leftBottom" />
+          <PaintedText text="C" from="rightBottom" />
+        </Flex>
       </Flex>
     </MainContainer>
   );
