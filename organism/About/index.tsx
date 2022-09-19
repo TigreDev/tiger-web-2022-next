@@ -17,7 +17,7 @@ const About = () => {
         overflow: "hidden",
       }}
     >
-      <Flex flexDir="row" w="full" align="center" justify="end">
+      <Flex flexDir="row" w="full" align="center" justify="end" zIndex={10}>
         <Flex
           textStyle="h1"
           color="white"
@@ -56,7 +56,8 @@ const About = () => {
       </Flex>
       <Flex
         position="absolute"
-        p="12"
+        p={{ base: "0", md: "12" }}
+        zIndex="0"
         w="full"
         h="full"
         overflow="hidden"
