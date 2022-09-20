@@ -46,6 +46,17 @@ const JapanText = () => {
           fontSize: "30px",
           cursor: "pointer",
         }}
+        whileInView={{
+          boxShadow: [
+            "0px 0px 10px white",
+            "0px 0px 0px white",
+            "0px 0px 10px white",
+            "0px 0px 0px white",
+          ],
+          transition: {
+            duration: 2.5,
+          },
+        }}
         onClick={() => setOpen(!isOpen)}
       >
         <Text

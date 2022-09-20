@@ -5,14 +5,17 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import Head from "next/head";
-import { useEffect } from "react";
+import { LegacyRef, useEffect, useRef } from "react";
 import CustomToast from "atoms/CustomToast";
 import About from "organism/About";
 import Hero from "organism/Hero";
 import NeverGiveUp from "molecules/NeverGiveUp";
-import TrainSection from "molecules/TrainSection";
+import Work from "organism/Work";
+import TrainBanner from "molecules/TrainBanner";
 
 const Landing = () => {
+  const pageRef = useRef(null);
+
   const toast = useToast();
   const position = useBreakpointValue({
     base: "bottom-left",
@@ -38,13 +41,15 @@ const Landing = () => {
   }, []);
 
   return (
-    <Box position="relative">
+    <Box position="relative" ref={pageRef}>
       <Head>
         <title>Ruben Tigre | Frontend Developer</title>
       </Head>
       <Hero />
       <NeverGiveUp />
       <About />
+      <TrainBanner containerRef={pageRef} />
+      <Work />
     </Box>
   );
 };
