@@ -1,6 +1,6 @@
-import { Box, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Text, useBreakpointValue } from "@chakra-ui/react";
 import { motion, useAnimationControls } from "framer-motion";
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 
 const JapanText = () => {

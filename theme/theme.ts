@@ -15,6 +15,11 @@ const theme = extendTheme({
         letterSpacing: "0.04em",
       },
     },
+    Text: {
+      defaultProps: {
+        textStyle: "p",
+      },
+    },
   },
   textStyles: {
     h1: {
@@ -26,6 +31,12 @@ const theme = extendTheme({
       fontSize: { base: "36px", md: "48px" },
       fontWeight: "semibold",
       lineHeight: "110%",
+    },
+    h3: {
+      fontSize: { base: "32px", md: "40px" },
+      fontWeight: "bold",
+      lineHeight: "100%",
+      letterSpacing: "-0.08em",
     },
     p: {
       fontSize: { base: "20px", md: "24px" },
