@@ -1,27 +1,26 @@
 import { Flex, FlexProps, mergeThemeOverride } from "@chakra-ui/react";
 import Image, { ImageProps } from "next/image";
-import React from "react";
+import { ReactNode } from "react";
 
 interface MainContainerProps {
-  children: React.ReactNode;
+  children: ReactNode;
   mainSX?: FlexProps;
   innerSX?: FlexProps;
-  bgImage?: ImageProps["src"];
-  bgImageProps?: Omit<Omit<ImageProps, "src">, "alt">;
+  bgImage?: string; // Changed type to string
+  bgImageProps?: Omit<ImageProps, "src" | "alt">; // Corrected the type
 }
 
 interface MainContainerStyles {
   mainSX?: FlexProps;
   innerSX?: FlexProps;
-  bgImageSX?: ImageProps;
 }
 
 const MainContainer = ({
   children,
   mainSX = {},
   innerSX = {},
-  bgImageProps = {},
   bgImage,
+  bgImageProps,
 }: MainContainerProps) => {
   const defaultTheme: MainContainerStyles = {
     mainSX: {

@@ -39,7 +39,6 @@ const TrainBanner = ({
         layout="fill"
         objectPosition="center"
         objectFit="cover"
-        height="433px"
         priority
       />
       <motion.div
